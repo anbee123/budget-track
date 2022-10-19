@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+        <h1><%= `${budget.name}` %></h1>
+        <button>
+        <a href="/budgets">Back</a>
+        </button>
+        </br>
+        <h6>Date:</h6>
+        <%= `${budget.date}` %>
+        <br></br>
+        <h6>Name:</h6>
+        <%= `${budget.name}` %>
+        <br></br>
+        <h6>From:</h6>
+        <%= `${budget.from}` %>
+        <br></br>
+        <h6>Amount:</h6>
+        <%= `${budget.amount}` %>
+        <br></br>
+        <h6>Tags:</h6>
+        <%= `${budget.tags}` %>
+        <br></br>
+        
+</div>
+</body>
+</html>
+
+<style>
+    h6 {
+        font-weight: bold;
+    }
+</style>

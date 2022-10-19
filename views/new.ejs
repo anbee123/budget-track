@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+        <h1>Add New Budget Item:</h1>
+        
+        <form action="/budgets" method="POST">
+            Name: <input type="text" placeholder="Item" name="name"></br>
+            Date: <input type="text" placeholder="Month Day" name="date"></br>
+            From: <input type="text" placeholder="Origin" name="from"></br>
+            Amount: <input type="text" placeholder= "Dollar amount" name="amount"></br>
+            Tags: <input type="text" placeholder="Tag" name="tags"></br>
+            <input type="submit" value="Add to Budget">
+        </form>
+        <button>
+            <a href="/budgets">Back</a>
+        </button>
+        
+</div>
+</body>
+</html>

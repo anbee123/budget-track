@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="/skeleton.css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"> 
+        <%let bankAccount = budget.reduce((acc, budget)=>{
+            return acc + parseInt(budget.amount);
+        }, 0);%>
+        
+       <% if (bankAccount < 0){ %>
+            <style> 
+            #bank {
+                color: red;
+            }
+            </style>
+        <% } else if (bankAccount > 1000) { %>
+            <style>
+            #bank {
+                color: green;
+            }
+            </style>
+       <% } %>
+        
+        <h1>Budgtr</h1><h2 id="bank">Total: <%="$" + bankAccount%></h2>
+        <button>
+            <a href="/budgets/new">New Item</a>
+         </button>
+    <table>
+        <% for(let i = 0; i < budget.length; i++) { %>
+        <tr>
+            <td><%=budget[i].date%></td>
+            <td><a href="/budgets/<%=i%>"><%=budget[i].name%></a></td>
+            <td><%=budget[i].amount%></td>
+        </tr>
+        <% } %>
+    </table>
+   
+</div>
+</body>
+</html>
